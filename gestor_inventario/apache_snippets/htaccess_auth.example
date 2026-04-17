@@ -1,0 +1,5 @@
+# apache_snippets/.htaccess_auth (si quieres autenticación básica por .htaccess)
+AuthType Basic
+AuthName "Inventario - Acceso restringido"
+AuthUserFile "/Applications/XAMPP/xamppfiles/security/.htpasswd"
+Require valid-user

@@ -1,0 +1,13 @@
+-- db/schema.sql
+CREATE DATABASE IF NOT EXISTS empresa_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE empresa_db;
+
+CREATE TABLE IF NOT EXISTS productos (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(120) NOT NULL,
+  cantidad INT UNSIGNED NOT NULL DEFAULT 0,
+  ubicacion VARCHAR(80) NOT NULL,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  INDEX idx_nombre (nombre)
+) ENGINE=InnoDB;
